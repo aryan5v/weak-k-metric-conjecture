@@ -1,0 +1,55 @@
+{
+  "scope": "k=2 weak metric dimension of K_n square K_m; supporting evidence for K2_RESOLUTION.md. Computational agreement is evidence, not proof.",
+  "date_utc": "2026-08-21",
+  "methods": {
+    "exact_enum": "independent weighted pair-witness subset enumeration (src/exact_hittingset.py); proves both directions on the listed small instances",
+    "ilp": "HiGHS branch-and-bound on the full pair-constraint formulation (scripts/certify_k2_ilp.py, scipy); every returned set re-validated against the original distance definition",
+    "direct_set_check": "explicit transversal sets verified by two independent code paths (src/weak_k_metric.py and an independent scratch reimplementation)"
+  },
+  "exact_enum_certified": [
+    {"n": 3, "m": 3, "wdim_2": 4, "note": "m = 2n-3; formula wdim_2 = m fails, matches Theorem 1.1 value ceil(4n/3) = 4"},
+    {"n": 3, "m": 4, "wdim_2": 4, "note": "m = 2n-2; seam, formula holds"},
+    {"n": 3, "m": 5, "wdim_2": 5, "note": "m = 2n-1; formula holds"},
+    {"n": 4, "m": 5, "wdim_2": 6, "note": "m = 2n-3; fails strictly"},
+    {"n": 4, "m": 6, "wdim_2": 6, "note": "m = 2n-2; seam, holds"},
+    {"n": 5, "m": 7, "wdim_2": 8, "note": "m = 2n-3; fails strictly; consistent with Table 1 of the paper (8)"}
+  ],
+  "ilp_certified": [
+    {"n": 3, "m": 3, "wdim_2": 4}, {"n": 3, "m": 4, "wdim_2": 4},
+    {"n": 3, "m": 5, "wdim_2": 5}, {"n": 3, "m": 6, "wdim_2": 6},
+    {"n": 3, "m": 7, "wdim_2": 7},
+    {"n": 4, "m": 4, "wdim_2": 6}, {"n": 4, "m": 5, "wdim_2": 6},
+    {"n": 4, "m": 6, "wdim_2": 6}, {"n": 4, "m": 7, "wdim_2": 7},
+    {"n": 4, "m": 8, "wdim_2": 8},
+    {"n": 5, "m": 5, "wdim_2": 7}, {"n": 5, "m": 6, "wdim_2": 8},
+    {"n": 5, "m": 7, "wdim_2": 8}, {"n": 5, "m": 8, "wdim_2": 8},
+    {"n": 5, "m": 9, "wdim_2": 9}, {"n": 5, "m": 10, "wdim_2": 10},
+    {"n": 5, "m": 11, "wdim_2": 11},
+    {"n": 6, "m": 7, "wdim_2": 9}, {"n": 6, "m": 8, "wdim_2": 10},
+    {"n": 6, "m": 9, "wdim_2": 10}, {"n": 6, "m": 10, "wdim_2": 10},
+    {"n": 6, "m": 11, "wdim_2": 11}, {"n": 6, "m": 12, "wdim_2": 12},
+    {"n": 7, "m": 7, "wdim_2": 10}, {"n": 7, "m": 8, "wdim_2": 10},
+    {"n": 7, "m": 9, "wdim_2": 11}, {"n": 7, "m": 10, "wdim_2": 12},
+    {"n": 7, "m": 11, "wdim_2": 12}, {"n": 7, "m": 12, "wdim_2": 12},
+    {"n": 7, "m": 13, "wdim_2": 13}
+  ],
+  "threshold_observation": {
+    "statement": "wdim_2 = m iff m >= 2n-2 in every computed instance (n = 3..7); below the seam the values match ceil(2(n+m)/3)",
+    "proved": "K2_RESOLUTION.md proves both directions for all n >= 3: wdim_2 = m for m >= 2n-2 (Lemmas 1+4), and wdim_2 >= m+1 for 3 <= m <= 2n-3 (Lemmas 2+3+5)",
+    "sub_threshold_conjecture_unproved": "wdim_2 = ceil(2(n+m)/3) for n <= m <= 2n-3 fits all exact data and contains the square case ceil(4n/3) of Theorem 1.1; no proof claimed"
+  },
+  "paper_discrepancy": {
+    "claim_checked": "Fernandez et al., Concluding remarks: 'when n = 5, the formula does not hold for m in {6,...,9}, and for n = 6 ... m in {7,...,11}'; Table 1 (n=5) k=2 row reports m=8 -> 9 and m=9 -> 10",
+    "finding": "the formula HOLDS at m = 2n-2 and m = 2n-1: exact ILP gives wdim_2(K_5[]K_8) = 8, wdim_2(K_5[]K_9) = 9, wdim_2(K_6[]K_10) = 10, wdim_2(K_6[]K_11) = 11, and explicit directly-verified transversal sets of size m exist (see below). For n=6 the remark even contradicts the paper's own Table 2, which reports 10 and 11. The Table 1 k=2 entries for m in {8,9} appear to be overestimates from the paper's modified ILP formulation for k in {2,3}.",
+    "certified_sets": [
+      {"n": 5, "m": 8, "row_sums": [0, 2, 2, 2, 2], "landmarks": [[1,0],[2,1],[3,2],[4,3],[1,4],[2,5],[3,6],[4,7]]},
+      {"n": 5, "m": 9, "row_sums": [0, 3, 2, 2, 2], "landmarks": [[1,0],[2,1],[3,2],[4,3],[1,4],[1,5],[2,6],[3,7],[4,8]]},
+      {"n": 6, "m": 10, "row_sums": [0, 2, 2, 2, 2, 2], "landmarks": [[1,0],[2,1],[3,2],[4,3],[5,4],[1,5],[2,6],[3,7],[4,8],[5,9]]},
+      {"n": 6, "m": 11, "row_sums": [0, 3, 2, 2, 2, 2], "landmarks": [[1,0],[2,1],[3,2],[4,3],[5,4],[1,5],[1,6],[2,7],[3,8],[4,9],[5,10]]}
+    ]
+  },
+  "diagonal_failure_at_2n_minus_1": {
+    "statement": "the plain diagonal f(j) = j mod n is NOT weak 2-resolving at m = 2n-1 (row sums (2,...,2,1); a swap pair through the degree-1 row has Delta = 1)",
+    "witness": {"n": 3, "m": 5, "pair": [[0, 2], [2, 0]], "delta": 1}
+  }
+}
