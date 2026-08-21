@@ -33,13 +33,13 @@ is **weak $k$-resolving** if every distinct pair $x,y$ satisfies
 $$\Delta_S(x,y) := \sum_{w\in S} \Delta_w(x,y) \ge k.$$
 
 The minimum size of a weak $k$-resolving set is the **weak $k$-metric dimension**
-$\operatorname{wdim}_k(G)$.
+$\mathrm{wdim}_k(G)$.
 
 ### 1.3 Conjecture 6.1 (the open problem)
 
 For integers $n \ge 3$, $m \ge n+1$, and $3 \le k \le 2n$, the source paper conjectures:
 
-$$\operatorname{wdim}_k(K_n \square K_m)=
+$$\mathrm{wdim}_k(K_n \square K_m)=
 \begin{cases}
 m\lceil k/2\rceil, & k \text{ even},\\[2mm]
 m\lceil k/2\rceil - 1, & k \text{ odd}.
@@ -56,7 +56,7 @@ rectangular case as this conjecture, supported by ILP experiments.
 
 **Theorem.** For all $n \ge 3$, $m \ge n+1$, and $3 \le k \le 2n$,
 
-$$\operatorname{wdim}_k(K_n\square K_m)=
+$$\mathrm{wdim}_k(K_n\square K_m)=
 \begin{cases}
 m\lceil k/2\rceil,&k\text{ even},\\[2mm]
 m\lceil k/2\rceil-1,&k\text{ odd}.
@@ -178,7 +178,7 @@ $\Delta_S<3$ under aligned-only reasoning.)
 
 The construction attains the lower bound in every parity case, hence
 
-$$\operatorname{wdim}_k(K_n\square K_m)=
+$$\mathrm{wdim}_k(K_n\square K_m)=
 \begin{cases}
 m\lceil k/2\rceil,&k\text{ even},\\[2mm]
 m\lceil k/2\rceil-1,&k\text{ odd},

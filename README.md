@@ -10,7 +10,7 @@ This repository contains a complete, self-contained proof of Conjecture 6.1 from
 
 For all $n \ge 3$, $m \ge n+1$, and $3 \le k \le 2n$:
 
-$$\operatorname{wdim}_k(K_n\square K_m)=
+$$\mathrm{wdim}_k(K_n\square K_m)=
 \begin{cases}
 m\lceil k/2\rceil,&k\text{ even},\\[2mm]
 m\lceil k/2\rceil-1,&k\text{ odd}.
