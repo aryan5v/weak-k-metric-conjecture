@@ -95,11 +95,11 @@ For $u=(a,b)$ and $x=(i,j)$, $d(u,x)=\mathbf{1}_{a\ne i}+\mathbf{1}_{b\ne j}$.
 If $x=(i,j)$ and $y=(i,j')$ share a row, the row terms cancel and a landmark
 contributes exactly when it lies in column $j$ or $j'$:
 
-$$\Delta_S(x,y)=h_j+h_{j'}. \tag{1}$$
+$$\Delta_S(x,y)=h_j+h_{j'}. \qquad \text{(1)}$$
 
 Dually, if $x=(i,j)$ and $y=(i',j)$ share a column:
 
-$$\Delta_S(x,y)=g_i+g_{i'}. \tag{2}$$
+$$\Delta_S(x,y)=g_i+g_{i'}. \qquad \text{(2)}$$
 
 Now let $x=(i,j)$ and $y=(i',j')$ be **non-aligned**: $i\ne i'$ and $j\ne j'$, so
 $d(x,y)=2$. The four layer sums $h_j+h_{j'}+g_i+g_{i'}$ count each endpoint twice
@@ -108,18 +108,18 @@ $d(x,y)=2$. The four layer sums $h_j+h_{j'}+g_i+g_{i'}$ count each endpoint twic
 and those are equidistant from $x$ and $y$, so their contribution must be removed.
 Therefore
 
-$$\Delta_S(x,y)=h_j+h_{j'}+g_i+g_{i'}-2A_{i,j'}-2A_{i',j}. \tag{3}$$
+$$\Delta_S(x,y)=h_j+h_{j'}+g_i+g_{i'}-2A_{i,j'}-2A_{i',j}. \qquad \text{(3)}$$
 
 An immediate consequence: if all same-row and same-column pairs satisfy the weak
 $k$ inequalities and $k\ge4$, then every non-aligned pair does too, because
 
-$$\Delta_S(x,y)\ge k+k-2-2=2k-4\ge k. \tag{4}$$
+$$\Delta_S(x,y)\ge k+k-2-2=2k-4\ge k. \qquad \text{(4)}$$
 
 ### 3.2 Lower bound
 
 By (1), every weak $k$-resolving set satisfies
 
-$$h_j+h_{j'}\ge k\qquad(j\ne j'). \tag{5}$$
+$$h_j+h_{j'}\ge k\qquad(j\ne j'). \qquad \text{(5)}$$
 
 Let $a=\min_j h_j$.
 
@@ -140,7 +140,7 @@ $$|S|\ge (r-1)+(m-1)r=mr-1=m\lceil k/2\rceil-1.$$
 
 Put $r=\lceil k/2\rceil$; the assumption $k\le 2n$ gives $r\le n$. Define
 
-$$S_0=\{(i,j)\in\mathbb Z_n\times\{0,\ldots,m-1\}:\ i-j \pmod n\in\{0,1,\ldots,r-1\}\}. \tag{6}$$
+$$S_0=\{(i,j)\in\mathbb Z_n\times\{0,\ldots,m-1\}:\ i-j \pmod n\in\{0,1,\ldots,r-1\}\}. \qquad \text{(6)}$$
 
 Each column of $S_0$ contains exactly $r$ vertices; among the first $n$ columns
 each row occurs exactly $r$ times; since $m\ge n+1$, every row contains at least
@@ -154,7 +154,7 @@ $k$-resolving with $|S|=mr$.
 **Odd case ($k=2r-1$, $k\ge5$).** Column $n$ exists (as $m\ge n+1$) and repeats
 the cyclic pattern of column $0$, so $(0,n)\in S_0$. Delete it:
 
-$$S=S_0\setminus\{(0,n)\}. \tag{7}$$
+$$S=S_0\setminus\{(0,n)\}. \qquad \text{(7)}$$
 
 Column $n$ now has size $r-1$ and every other column size $r$, so every pair of
 columns has combined size at least $2r-1=k$. Row zero retains its $r$ vertices
