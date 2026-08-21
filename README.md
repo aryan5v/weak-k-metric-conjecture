@@ -22,6 +22,7 @@ formulation, no reliance on the paper's Proposition 4.1, and no computation.
 ## Read this
 
 - **[`SOLUTION.md`](SOLUTION.md)** — problem statement, result, and full proof (start here)
+- **[`K2_RESOLUTION.md`](K2_RESOLUTION.md)** — the remaining $k=2$ problem: $\mathrm{wdim}_2(K_n\square K_m) = m$ proved for the exact threshold $m \ge 2n-2$ (sharp; strengthens the paper's $m \ge 2n$ belief), with certified corrections to the paper's $k=2$ table entries
 - **[`INDEPENDENT_REVIEW.md`](INDEPENDENT_REVIEW.md)** — independent adversarial referee audit (Kimi K3 model): verdict **VALID PROOF**
 
 The proof has also passed internal algebraic, boundary, and exact-computation
@@ -31,9 +32,11 @@ audits. It has not yet undergone formal journal peer review.
 
 | Path | Purpose |
 |---|---|
-| `SOLUTION.md` | Problem, solution, and complete proof |
+| `SOLUTION.md` | Problem, solution, and complete proof ($3 \le k \le 2n$) |
+| `K2_RESOLUTION.md` | The $k=2$ threshold theorem and its proof |
 | `INDEPENDENT_REVIEW.md` | Independent referee report (Kimi K3 model) |
 | `src/weak_k_metric.py` | Cyclic construction + direct verifier from graph distances |
+| `src/weak_k2.py` | $k=2$ transversal constructions and criterion |
 | `src/exact_hittingset.py` | Independent exact weighted-witness verifier |
 | `src/bruteforce.py` | Tiny-instance subset-enumeration reference optimum |
 | `tests/` | Proof-lemma, construction, and exact-optimum regression tests |
