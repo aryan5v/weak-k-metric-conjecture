@@ -1,0 +1,13 @@
+{
+  "graph": "K_3 square K_4",
+  "n": 3,
+  "m": 4,
+  "method": "independent exact weighted pair-witness enumeration",
+  "status": "recomputed after the 2026-08-20 weighted-endpoint correction; CI recomputes via tests/test_exact_hittingset.py",
+  "results": [
+    {"k": 3, "exact_wdim": 7, "conjectured": 7, "match": true},
+    {"k": 4, "exact_wdim": 8, "conjectured": 8, "match": true},
+    {"k": 5, "exact_wdim": 11, "conjectured": 11, "match": true},
+    {"k": 6, "exact_wdim": 12, "conjectured": 12, "match": true}
+  ]
+}

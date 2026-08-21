@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-08-20T21:58:14Z",
+  "code_base_commit": "0bc5c3dc4997f15d533fb1cd144474ad19dc2e8d",
+  "working_tree_note": "Results use the weighted-witness correction recorded on branch aryan/adversarial-proof-audit.",
+  "algorithm": "exact weighted pair-witness subset enumeration",
+  "verification": "cyclic candidate checked independently against the original distance definition",
+  "results": [
+    {"n": 3, "m": 4, "k": 3, "exact_optimum": 7, "conjectured_optimum": 7, "cyclic_size": 7, "direct_feasible": true, "runtime_seconds": 0.001892},
+    {"n": 3, "m": 4, "k": 4, "exact_optimum": 8, "conjectured_optimum": 8, "cyclic_size": 8, "direct_feasible": true, "runtime_seconds": 0.001794},
+    {"n": 3, "m": 4, "k": 5, "exact_optimum": 11, "conjectured_optimum": 11, "cyclic_size": 11, "direct_feasible": true, "runtime_seconds": 0.002112},
+    {"n": 3, "m": 4, "k": 6, "exact_optimum": 12, "conjectured_optimum": 12, "cyclic_size": 12, "direct_feasible": true, "runtime_seconds": 0.002090},
+    {"n": 3, "m": 5, "k": 3, "exact_optimum": 9, "conjectured_optimum": 9, "cyclic_size": 9, "direct_feasible": true, "runtime_seconds": 0.017927},
+    {"n": 3, "m": 5, "k": 4, "exact_optimum": 10, "conjectured_optimum": 10, "cyclic_size": 10, "direct_feasible": true, "runtime_seconds": 0.015995},
+    {"n": 3, "m": 5, "k": 5, "exact_optimum": 14, "conjectured_optimum": 14, "cyclic_size": 14, "direct_feasible": true, "runtime_seconds": 0.017836},
+    {"n": 3, "m": 5, "k": 6, "exact_optimum": 15, "conjectured_optimum": 15, "cyclic_size": 15, "direct_feasible": true, "runtime_seconds": 0.017548},
+    {"n": 4, "m": 5, "k": 3, "exact_optimum": 9, "conjectured_optimum": 9, "cyclic_size": 9, "direct_feasible": true, "runtime_seconds": 0.283073},
+    {"n": 4, "m": 5, "k": 4, "exact_optimum": 10, "conjectured_optimum": 10, "cyclic_size": 10, "direct_feasible": true, "runtime_seconds": 0.276993},
+    {"n": 4, "m": 5, "k": 5, "exact_optimum": 14, "conjectured_optimum": 14, "cyclic_size": 14, "direct_feasible": true, "runtime_seconds": 0.689445},
+    {"n": 4, "m": 5, "k": 6, "exact_optimum": 15, "conjectured_optimum": 15, "cyclic_size": 15, "direct_feasible": true, "runtime_seconds": 0.616521},
+    {"n": 4, "m": 5, "k": 7, "exact_optimum": 19, "conjectured_optimum": 19, "cyclic_size": 19, "direct_feasible": true, "runtime_seconds": 0.629617},
+    {"n": 4, "m": 5, "k": 8, "exact_optimum": 20, "conjectured_optimum": 20, "cyclic_size": 20, "direct_feasible": true, "runtime_seconds": 0.606163}
+  ]
+}
