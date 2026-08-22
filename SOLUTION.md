@@ -231,7 +231,7 @@ threshold is $m \ge 2n-2$ — $\mathrm{wdim}_2(K_n \square K_m) = m$ holds there
 and fails for $3 \le m \le 2n-3$. The seam cases $m \in \{2n-2, 2n-1\}$ are
 attained by exceptional transversals (the plain diagonal works only for
 $m \ge 2n$), and two $k=2$ entries of the paper's Table 1 are corrected by
-certified computation.
+explicit constructions with a matching lower bound and independent computation.
 
 ## 7. Novelty note
 

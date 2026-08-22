@@ -63,7 +63,7 @@ $K_n \square K_m$ satisfies $|S| \ge m$.*
 **Proof.** Fix any row $i$. For distinct columns $j \ne j'$ the pair
 $(i,j),(i,j')$ and identity (R) force
 
-$$h_j + h_{j'} \ge 2 \qquad (j \ne j'). \tag{5}$$
+$$h_j + h_{j'} \ge 2 \qquad (j \ne j'). \qquad \text{(5)}$$
 
 Let $a = \min_j h_j$. If $a \ge 1$, then $|S| = \sum_j h_j \ge m$. If $a = 0$,
 pick $j_0$ with $h_{j_0} = 0$; (5) gives $h_j \ge 2$ for all $j \ne j_0$, so
@@ -102,7 +102,7 @@ of distinct rows occurs (in every column), so these constraints are exactly
 *Non-aligned pairs.* For $x=(i,j)$, $y=(i',j')$ with $i\ne i'$, $j\ne j'$,
 identity (N) with $h \equiv 1$ reads
 
-$$\Delta_S(x,y) = 2 + g_i + g_{i'} - 2\mathbf{1}[f(j')=i] - 2\mathbf{1}[f(j)=i']. \tag{$\ast$}$$
+$$\Delta_S(x,y) = 2 + g_i + g_{i'} - 2\mathbf{1}[f(j')=i] - 2\mathbf{1}[f(j)=i']. \qquad \text{(*)}$$
 
 *Case both indicators $1$.* Then $i = f(j')$ and $i' = f(j)$ are distinct rows
 in the image of $f$, and $\Delta = g_i + g_{i'} - 2$, which is $\ge 2$ iff
@@ -111,8 +111,7 @@ choosing $j' \in f^{-1}(i)$ and $j \in f^{-1}(i')$ produces such a pair
 ($j \ne j'$ automatically since $f(j) = i' \ne i = f(j')$). So this family is
 exactly (R2).
 
-*Case exactly one indicator $1$.* $\Delta = 1 + g_i + g_{i'} \ge 2$ holds
-because $g_i + g_{i'} \ge 1$; indeed (R1) already gives $\ge 2$.
+*Case exactly one indicator $1$.* $\Delta = g_i + g_{i'} \ge 2$ by (R1).
 
 *Case no indicator $1$.* $\Delta = 2 + g_i + g_{i'} \ge 2$ by (R1).
 
@@ -147,7 +146,8 @@ $(2,\dots,2,1)$, and (R2) fails for the pair of a degree-$2$ row and the
 degree-$1$ row. Concretely, at $(n,m) = (3,5)$ the pair $x=(0,2)$,
 $y=(2,0)$ has $\Delta_S(x,y) = 1 < 2$ (both cross cells $(0,0),(2,2)$ are
 landmarks). So the "one diagonal band" idea is exactly tight at $m = 2n$,
-while the *formula* starts one step earlier via the exceptional designs above.
+while the *formula* also holds at the two preceding seam values via the
+exceptional designs above.
 
 ### Lemma 5 (below the seam the formula fails). 
 *Let $n \ge 3$ and $3 \le m \le 2n-3$. Then
@@ -196,8 +196,9 @@ Lemma 4. $\blacksquare$
   are recorded in `experiments/results/k2_exact_boundary.json` and re-verified
   by `tests/test_k2.py`. For $n=6$ the note even contradicts the paper's own
   Table 2, which reports $10$ and $11$ at $m = 10, 11$. The paper's Table 1
-  ($n=5$) $k=2$ entries $9$ and $10$ at $m = 8, 9$ are overestimates, plausibly
-  from the modified ILP formulation the paper uses for $k \in \{2,3\}$.
+  ($n=5$) $k=2$ entries $9$ and $10$ at $m = 8, 9$ are overestimates. The
+  published article alone does not determine whether the cause was an
+  implementation issue, a transcription error, or a stale reported result.
 * Everything the paper reports for $m \le 2n-3$ agrees with our exact
   recomputation: e.g. $\mathrm{wdim}_2(K_5 \square K_6) = 8$,
   $\mathrm{wdim}_2(K_5 \square K_7) = 8$, $\mathrm{wdim}_2(K_6 \square K_7) = 9$.
